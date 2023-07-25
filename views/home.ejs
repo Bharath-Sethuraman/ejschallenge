@@ -1,0 +1,11 @@
+<%- include("partials/header"); %>
+<h1>Home</h1>
+<p><%=contentejs %></p>
+<% console.log(item) %>
+<%item.forEach(function(pin){%>
+    <h1><%=pin.title%></h1>
+    <p><%=pin.content.substring(0,100)+" ...";%>
+        <a href="/posts/<%=pin._id %>">Read More</a>
+    </p>
+<%})%>
+<%- include("partials/footer"); %>
